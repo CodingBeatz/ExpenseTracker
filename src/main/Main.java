@@ -35,6 +35,7 @@ public class Main {
 		else if(choice == 4)
 		{
 		    System.out.println("Delete Expense Selected");
+		    System.out.println("testing");
 		}
 		else if(choice == 5)
 		{
