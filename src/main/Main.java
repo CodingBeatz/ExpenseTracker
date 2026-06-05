@@ -1,8 +1,9 @@
 package main;
 
 import java.util.Scanner;
+import utils.ValidationUtil;
 import model.Expense;
-
+import service.SummaryService;
 public class Main {
 
     public static void main(String[] args) {
@@ -37,18 +38,33 @@ public class Main {
                     int id = sc.nextInt();
                     sc.nextLine();
 
+                    if (!ValidationUtil.isValidId(id))
+                        break;
+
                     System.out.print("Enter Title: ");
                     String title = sc.nextLine();
 
+                    if (!ValidationUtil.isValidTitle(title))
+                        break;
+
                     System.out.print("Enter Category: ");
                     String category = sc.nextLine();
+
+                    if (!ValidationUtil.isValidCategory(category))
+                        break;
 
                     System.out.print("Enter Amount: ");
                     double amount = sc.nextDouble();
                     sc.nextLine();
 
+                    if (!ValidationUtil.isValidAmount(amount))
+                        break;
+
                     System.out.print("Enter Date: ");
                     String date = sc.nextLine();
+
+                    if (!ValidationUtil.isValidDate(date))
+                        break;
 
                     Expense e = new Expense(id, title, category, amount, date);
 
@@ -68,18 +84,33 @@ public class Main {
                     int updateId = sc.nextInt();
                     sc.nextLine();
 
+                    if (!ValidationUtil.isValidId(updateId))
+                        break;
+
                     System.out.print("Enter New Title: ");
                     String newTitle = sc.nextLine();
 
+                    if (!ValidationUtil.isValidTitle(newTitle))
+                        break;
+
                     System.out.print("Enter New Category: ");
                     String newCategory = sc.nextLine();
+
+                    if (!ValidationUtil.isValidCategory(newCategory))
+                        break;
 
                     System.out.print("Enter New Amount: ");
                     double newAmount = sc.nextDouble();
                     sc.nextLine();
 
+                    if (!ValidationUtil.isValidAmount(newAmount))
+                        break;
+
                     System.out.print("Enter New Date: ");
                     String newDate = sc.nextLine();
+
+                    if (!ValidationUtil.isValidDate(newDate))
+                        break;
 
                     Expense.updateExpense(
                             updateId,
@@ -101,9 +132,9 @@ public class Main {
 
                 case 5:
 
-                    System.out.println("Monthly Summary Module Under Development");
+                	SummaryService.showSummary();
 
-                    break;
+                	break;
 
                 case 6:
 

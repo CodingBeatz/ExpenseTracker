@@ -47,9 +47,25 @@ public class Expense {
 		this.date = date;
 	}
 	//ADD
-	public void addExpense() {
-		expenses.add(this);
-		System.out.println("Expense Added successfully");}
+	public void addExpense()
+	{
+	    for(Expense e : expenses)
+	    {
+	        if(e.getId() == this.id)
+	        {
+	            System.out.println(
+	                "Expense ID already exists!"
+	            );
+	            return;
+	        }
+	    }
+
+	    expenses.add(this);
+
+	    System.out.println(
+	        "Expense Added Successfully"
+	    );
+	}
 	//VIEW
 	public static void viewExpenses()
 	{
@@ -107,6 +123,10 @@ public static void updateExpense(int id,String title,String category,double amou
 	public String toString() {
 		return "Expense [id=" + id + ", title=" + title + ", category=" + category + ", amount=" + amount + ", date="
 				+ date + "]";
+	}
+	public static ArrayList<Expense> getExpenses()
+	{
+	    return expenses;
 	}
 
 }
