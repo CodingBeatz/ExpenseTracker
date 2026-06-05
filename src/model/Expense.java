@@ -51,14 +51,27 @@ public class Expense {
 		expenses.add(this);
 		System.out.println("Expense Added successfully");}
 	//VIEW
-	public static void viewExpenses() {
-		if(expenses.isEmpty())
-		{
-			System.out.println("No Expenses Found");
-			return;}
-		
-	for(Expense e : expenses) {
-		System.out.println(e);}
+	public static void viewExpenses()
+	{
+	    if(expenses.isEmpty())
+	    {
+	        System.out.println("\nNo Expenses Found\n");
+	        return;
+	    }
+
+	    System.out.println("\n========================================");
+	    System.out.println("           EXPENSE LIST");
+	    System.out.println("========================================");
+
+	    for(Expense e : expenses)
+	    {
+	        System.out.println("ID       : " + e.getId());
+	        System.out.println("Title    : " + e.getTitle());
+	        System.out.println("Category : " + e.getCategory());
+	        System.out.println("Amount   : ₹" + e.getAmount());
+	        System.out.println("Date     : " + e.getDate());
+	        System.out.println("----------------------------------------");
+	    }
 	}
 
 //DELETE
