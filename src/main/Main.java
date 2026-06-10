@@ -6,6 +6,7 @@ import model.Expense;
 import service.SummaryService;
 import database.DBconnection;
 import java.sql.Connection;
+import database.ExpenseDAO;
 public class Main {
 
     public static void main(String[] args) {
@@ -79,10 +80,10 @@ public class Main {
                     if (!ValidationUtil.isValidDate(date))
                         break;
 
-                    Expense e = new Expense(id, title, category, amount, date);
+                    Expense e =
+                    		new Expense(id,title,category,amount,date);
 
-                    e.addExpense();
-
+                    		ExpenseDAO.addExpense(e);
                     break;
 
                 case 2:

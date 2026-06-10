@@ -1,4 +1,7 @@
-# Compiled class file
+sazszsazsazswqAQq1	AQ	Q1q1wqse2q2qw2qw23wqasazxszxdesxzsazsxzasxzxdcfrdfrftrff4desdxedsxesxdwdxcdxszzcASXDZkm n  mjhnb jhbhjunjmkiujkiujmkoikjoi8uyhnjiu7yhgjuytgfvbtfcvfgtrdcfvrdesxewsawaq	`121`	12q`	`	1`	```1`111`		`1q234er5t6y7uytrfdrewszxcv bm, 
+
+]\]\]\][
+\                                                                                 Compiled class file
 *.class
 
 # Log file
@@ -10,7 +13,7 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Package Files #
+# Package Files #44444444444444444e34321232123212321234567
 *.jar
 *.war
 *.nar
@@ -18,8 +21,11 @@
 *.zip
 *.tar.gz
 *.rar
+# SQLite Database
+*.db
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
 /bin/
+expense.db
