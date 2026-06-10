@@ -7,6 +7,7 @@ import service.SummaryService;
 import database.DBconnection;
 import java.sql.Connection;
 import database.ExpenseDAO;
+import database.ExpenseDAO;
 public class Main {
 
     public static void main(String[] args) {
@@ -88,8 +89,7 @@ public class Main {
 
                 case 2:
 
-                    Expense.viewExpenses();
-
+                	ExpenseDAO.viewExpenses();
                     break;
 
                 case 3:
