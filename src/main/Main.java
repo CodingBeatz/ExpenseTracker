@@ -4,9 +4,22 @@ import java.util.Scanner;
 import utils.ValidationUtil;
 import model.Expense;
 import service.SummaryService;
+import database.DBconnection;
+import java.sql.Connection;
 public class Main {
 
     public static void main(String[] args) {
+    	
+
+    	    Connection con = DBconnection.getConnection();
+
+    	    if (con == null) {
+    	        System.out.println("Database Connection Failed!");
+    	        return;
+    	    }
+
+    	   
+    	
 
         Scanner sc = new Scanner(System.in);
         boolean running = true;
