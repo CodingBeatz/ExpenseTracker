@@ -14,6 +14,12 @@ public class Main {
     	
 
     	    Connection con = DBconnection.getConnection();
+    	    if (con != null) {
+                System.out.println("================================");
+                System.out.println("SQLite Connected Successfully!");
+                System.out.println("Database Ready!");
+                System.out.println("================================");
+            }
 
     	    if (con == null) {
     	        System.out.println("Database Connection Failed!");
@@ -140,7 +146,8 @@ public class Main {
                     System.out.print("Enter Expense ID to Delete: ");
                     int deleteId = sc.nextInt();
 
-                    ExpenseDAO.deleteExpense(deleteId);                    break;
+                    ExpenseDAO.deleteExpense(deleteId);  
+                    break;
 
                 case 5:
 

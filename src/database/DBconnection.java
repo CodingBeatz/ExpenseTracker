@@ -15,6 +15,7 @@ public class DBconnection {
             Class.forName("org.sqlite.JDBC");
 
             Connection con = DriverManager.getConnection(URL);
+           
 
             Statement stmt = con.createStatement();
 
@@ -27,8 +28,7 @@ public class DBconnection {
                     "date TEXT NOT NULL" +
                     ");");
 
-            System.out.println("SQLite Connected Successfully!");
-            System.out.println("Table Ready!");
+           
 
             return con;
 
