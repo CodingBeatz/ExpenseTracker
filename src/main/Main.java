@@ -140,9 +140,7 @@ public class Main {
                     System.out.print("Enter Expense ID to Delete: ");
                     int deleteId = sc.nextInt();
 
-                    Expense.deleteExpense(deleteId);
-
-                    break;
+                    ExpenseDAO.deleteExpense(deleteId);                    break;
 
                 case 5:
 

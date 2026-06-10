@@ -135,4 +135,39 @@ public class ExpenseDAO {
             e.printStackTrace();
         }
     }
+    public static void deleteExpense(int id)
+    {
+        String sql =
+                "DELETE FROM expenses WHERE id=?";
+
+        try
+        {
+            Connection con = DBconnection.getConnection();
+
+            PreparedStatement ps =
+                    con.prepareStatement(sql);
+
+            ps.setInt(1, id);
+            System.out.println("Deleting ID = " + id);
+            int rows = ps.executeUpdate();
+
+            if(rows > 0)
+            {
+                System.out.println("Expense Deleted Successfully!");
+            }
+            else
+            {
+                System.out.println("Expense Not Found!");
+            }
+
+            ps.close();
+            con.close();
+        }
+
+        catch(Exception e)
+        {
+            System.out.println("Failed to Delete Expense");
+            e.printStackTrace();
+        }
+    }
 }
