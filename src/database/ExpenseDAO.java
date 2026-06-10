@@ -91,4 +91,48 @@ public class ExpenseDAO {
             System.out.println("Failed to View Expenses");
             e.printStackTrace();
         }
-}}
+}
+    public static void updateExpense(int id,
+            String title,
+            String category,
+            double amount,
+            String date)
+    {
+        String sql =
+                "UPDATE expenses SET title=?, category=?, amount=?, date=? WHERE id=?";
+
+        try
+        {
+            Connection con = DBconnection.getConnection();
+
+            PreparedStatement ps =
+                    con.prepareStatement(sql);
+
+            ps.setString(1, title);
+            ps.setString(2, category);
+            ps.setDouble(3, amount);
+            ps.setString(4, date);
+            ps.setInt(5, id);
+
+            int rows = ps.executeUpdate();
+
+            if(rows > 0)
+            {
+                System.out.println("Expense Updated Successfully!");
+            }
+            else
+            {
+                System.out.println("Expense Not Found, unable to perform updation\nExiting update...3");
+            }
+
+            ps.close();
+            con.close();
+        }
+
+        catch(Exception e)
+        {
+            System.out.println("Failed to Update Expense");
+            e.printStackTrace();
+        }
+    }
+}

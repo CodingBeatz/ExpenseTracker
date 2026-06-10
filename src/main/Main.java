@@ -126,7 +126,7 @@ public class Main {
                     if (!ValidationUtil.isValidDate(newDate))
                         break;
 
-                    Expense.updateExpense(
+                    ExpenseDAO.updateExpense(
                             updateId,
                             newTitle,
                             newCategory,
