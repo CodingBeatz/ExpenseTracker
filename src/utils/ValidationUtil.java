@@ -14,15 +14,30 @@ public class ValidationUtil {
         if (title == null || title.trim().isEmpty()) {
             System.out.println("[ERROR] Title cannot be empty.");
             return false;
+            
+        }
+        if(!title.matches("[A-Za-z ]+"))
+        {
+            System.out.println("[ERROR] Category must contain only letters.");
+            return false;
         }
         return true;
     }
 
-    public static boolean isValidCategory(String category) {
-        if (category == null || category.trim().isEmpty()) {
+    public static boolean isValidCategory(String category)
+    {
+        if(category == null || category.trim().isEmpty())
+        {
             System.out.println("[ERROR] Category cannot be empty.");
             return false;
         }
+
+        if(!category.matches("[A-Za-z ]+"))
+        {
+            System.out.println("[ERROR] Category must contain only letters.");
+            return false;
+        }
+
         return true;
     }
 
