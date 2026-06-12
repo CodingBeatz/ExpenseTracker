@@ -8,6 +8,7 @@ import database.DBconnection;
 import java.sql.Connection;
 import database.ExpenseDAO;
 import database.ExpenseDAO;
+import utils.FileExportUtil;
 public class Main {
 
     public static void main(String[] args) {
@@ -43,7 +44,7 @@ public class Main {
                 System.out.println("2. View Expenses");
                 System.out.println("3. Update Expense");
                 System.out.println("4. Delete Expense");
-                System.out.println("5. Monthly Summary");
+                System.out.println("5. Expense Summary");
                 System.out.println("6. Export Report");
                 System.out.println("7. Exit");
                 System.out.print("Enter Choice: ");
@@ -157,7 +158,7 @@ public class Main {
 
                 case 6:
 
-                    System.out.println("Export Module Under Development");
+                    FileExportUtil.exportFile();
 
                     break;
 
