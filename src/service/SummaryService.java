@@ -6,7 +6,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import database.DBconnection;
 
+
 public class SummaryService {
+	public static double summaryTotal= 0;
+	public static  String summaryDetails= "";
 
     public static void showSummary() {
 
@@ -15,7 +18,7 @@ public class SummaryService {
         System.out.println("\n===== EXPENSE SUMMARY MENU =====");
         System.out.println("1. Monthly Expense Summary");
         System.out.println("2. Yearly Expense Summary");
-        System.out.print("Enter Choice: ");
+        System.out.print("Enter  Choice: ");
 
         int choice = sc.nextInt();
 
@@ -46,12 +49,12 @@ public class SummaryService {
                 if (rs.next()) {
                     total = rs.getDouble(1);
                 }
-
+                summaryTotal =total;
+                summaryDetails = " Month:"+ month +"Year:"+ year;
                 System.out.println("\n===== MONTHLY SUMMARY =====");
                 System.out.println("Month : " + month);
                 System.out.println("Year  : " + year);
                 System.out.println("Total Expenses : ₹" + total);
-
                 rs.close();
                 ps.close();
                 con.close();
@@ -85,11 +88,11 @@ public class SummaryService {
                 if (rs.next()) {
                     total = rs.getDouble(1);
                 }
-
+                summaryTotal=total;
+                summaryDetails ="Year:"+year;
                 System.out.println("\n===== YEARLY SUMMARY =====");
                 System.out.println("Year : " + year);
                 System.out.println("Total Expenses : ₹" + total);
-
                 rs.close();
                 ps.close();
                 con.close();

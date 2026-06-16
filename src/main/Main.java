@@ -157,8 +157,17 @@ public class Main {
                 	break;
 
                 case 6:
+                	if(SummaryService.summaryDetails.equals(""))
+                	{
+                		  System.out.println("please generate summary first!");
+                	}
+                	else {
 
-                    FileExportUtil.exportFile();
+                    FileExportUtil.exportReport(
+                    		SummaryService.summaryTotal,
+                    		SummaryService.summaryDetails
+                    		);
+                	}
 
                     break;
 
