@@ -7,7 +7,6 @@ import service.SummaryService;
 import database.DBconnection;
 import java.sql.Connection;
 import database.ExpenseDAO;
-import database.ExpenseDAO;
 import utils.FileExportUtil;
 public class Main {
 
@@ -157,17 +156,8 @@ public class Main {
                 	break;
 
                 case 6:
-                	if(SummaryService.summaryDetails.equals(""))
-                	{
-                		  System.out.println("please generate summary first!");
-                	}
-                	else {
 
-                    FileExportUtil.exportReport(
-                    		SummaryService.summaryTotal,
-                    		SummaryService.summaryDetails
-                    		);
-                	}
+                    FileExportUtil.exportReport();
 
                     break;
 
