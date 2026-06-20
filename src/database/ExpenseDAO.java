@@ -38,10 +38,10 @@ public class ExpenseDAO {
             ps.close();
             con.close();
 
-        } catch (Exception e) {
-
-            System.out.println("Failed to Add Expense");
-            e.printStackTrace();        }
+        } catch (Exception e)
+        {
+            System.out.println("Failed to Add Expense!");
+        }
 
     }
     
@@ -168,6 +168,35 @@ public class ExpenseDAO {
         {
             System.out.println("Failed to Delete Expense");
             e.printStackTrace();
+        }
+    }
+    public static boolean idExists(int id)
+    {
+        String sql = "SELECT id FROM expenses WHERE id=?";
+
+        try
+        {
+            Connection con = DBconnection.getConnection();
+
+            PreparedStatement ps =
+                    con.prepareStatement(sql);
+
+            ps.setInt(1, id);
+
+            ResultSet rs = ps.executeQuery();
+
+            boolean exists = rs.next();
+
+            rs.close();
+            ps.close();
+            con.close();
+
+            return exists;
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+            return false;
         }
     }
 }

@@ -1,31 +1,14 @@
 ====================================
-YEARLY EXPENSE REPORT
-Year : 2026
+MONTHLY EXPENSE REPORT
+Month : 9
+Year : 2007
 ====================================
 
 ID       : 1
-Title    : Bottle
-Category : Utilities
-Amount   : ₹450.0
-Date     : 09-08-2026
-------------------------------------
-ID       : 2
-Title    : umbrella
-Category : utilities
-Amount   : ₹200.0
-Date     : 09-02-2026
-------------------------------------
-ID       : 3
-Title    : cake
-Category : food
-Amount   : ₹300.0
-Date     : 03-09-2026
-------------------------------------
-ID       : 5
-Title    : cpu
-Category : electronics
-Amount   : ₹950.0
-Date     : 04-09-2026
+Title    : Laptop
+Category : Electronics
+Amount   : ₹100000.0
+Date     : 03-09-2007
 ------------------------------------
 
-Total Expense : ₹1900.0
+Total Expense : ₹100000.0

@@ -61,6 +61,11 @@ public class Main {
 
                     if (!ValidationUtil.isValidId(id))
                         break;
+                    if (ExpenseDAO.idExists(id))
+                    {
+                        System.out.println("Expense ID already exists!");
+                        break;
+                    }
 
                     System.out.print("Enter Title: ");
                     String title = sc.nextLine();
